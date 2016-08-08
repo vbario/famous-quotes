@@ -1,0 +1,287 @@
+/*CSS for Alicia Theme
+By Vladimir Baranov
+HackerYou 2016 Summer Bootcamp - Week 3*/
+
+/*Import frameworks*/
+@import "reset";
+// @import "grid";
+
+/*Theme Colors (SCSS)*/
+$highlight: #8b2635;
+$dark: #a4969b;
+$darker: #2e3532;
+$light:	#d2d4c8;
+$lighter: #e0e2db;
+
+$maxWidth: 600px;
+
+//d3efbd
+
+/*Theme Fonts (SCSS)*/
+$pageFont: "Open Sans", sans serif;
+
+
+*, *:before, *:after {     
+		moz-box-sizing: border-box; 
+        -webkit-box-sizing: border-box; 
+        box-sizing: border-box; 
+}
+
+body {
+	// background-color: black;
+	background: -webkit-linear-gradient(left, #000000, #171717);
+	background: -o-linear-gradient(left, #000000, #171717);
+    background: linear-gradient(to right, #000000, #171717); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 16px;
+	font-family: $pageFont;
+	overflow-x: hidden;
+
+	@media (max-width: 480px) {
+		font-size: 12px;
+	}
+}
+
+div {
+	// padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#quote-div {
+	background: #a73737; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(left, #a73737, #7a2828);
+	background: -o-linear-gradient(left, #a73737, #7a2828);
+    background: linear-gradient(to right, #a73737, #7a2828); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	// padding-top: 30px;
+	// padding-bottom: 30px;
+	min-height: 32vh;
+	z-index: -20;
+}		
+
+#author-name-div {
+
+
+background: #232526; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #232526 , #414345); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #232526 , #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+	font-size: 1.2rem;
+	height: 18vh;
+	flex-direction: row;
+  	align-items: center;
+ 	// justify-content: center;
+}
+
+#author-name {
+	margin-top: 0.6rem;
+	transform: translateX(12%);
+	z-index: -10;
+}
+
+p {
+	color: white;
+}
+
+.bar-item {
+	height: 100%;
+	width: 33.3333%;
+	// opacity: 0.75;
+
+	p {
+		color: #8c8c8c;
+	}
+
+	&:hover {
+		background: $lighter;
+
+		p {
+			color: black;
+		}
+	}
+}
+
+.replay-item, .next-item {
+	font-style: italic;
+	font-size: 0.75em;
+
+	&:hover {
+    	cursor: pointer;
+	}
+}
+
+#quote {
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 1.5rem;
+	line-height: 1.4em;
+
+	@media (max-width: 480px) {
+		font-size: 1.2rem;
+		line-height: 1.4em;
+	}
+
+	@media (max-height: 500px) {
+		font-size: 1.2rem;
+		line-height: 1.4em;
+	}
+}
+
+.share-quote {
+	padding: 0px 5px;
+	&:hover {
+    	// cursor: pointer;
+	}
+}
+
+#volume-control {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    width: unset;
+    z-index: 20;
+}
+
+#loading {
+	display: flex;
+	justify-content: space-around;
+	max-width: $maxWidth;
+	position: absolute;
+	height: 86vh;
+	width: 100%;
+	background: #111111;
+	// z-index: 
+	display: none;
+	top: 0;
+
+
+}
+
+a {
+
+}
+
+h1 {
+	font-size: 2rem;
+	font-style: italic;
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+header {
+
+}
+
+footer {
+
+}
+
+.wrapper {
+	max-width: $maxWidth;
+	margin: 0 auto;
+	padding: 0;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	position: relative;
+	// justify-content: space-around;
+}
+
+#author-img {
+	// max-width: 50%;
+	// heigth: 50%;
+}
+
+
+#author-pic {
+	position: relative;
+	background: $lighter;
+	height: 68vh;
+	display: flex;
+	justify-content: space-around;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: -5;
+
+	@media (max-height: 500px) {
+		background-position: 50% 50% !important;
+	}
+
+-webkit-transition: background-position 2s;
+    transition: background-position 2s;
+}
+
+#shareThis {
+	text-transform: uppercase;
+	font-style: italic;
+	font-weight: 200;
+	opacity: 0.5;
+}
+
+#replay-next-div {
+	height: 16vh;
+	flex-direction: row;
+}
+
+i {
+	display: inline-block;
+	width: 50%;
+	font-size: 2.5rem !important;
+	color: #8c8c8c !important;
+}
+
+.social {
+	flex-direction: row;
+	padding: 0 10%;
+	// margin-bottom: 12px;
+}
+
+.wrapper {
+
+}
+
+#share {
+	margin-bottom: 8px;
+	margin-top: 12px;
+}
+
+/* TOOLS */
+
+	/*CLEARFIX*/
+	.clearfix:after {
+	  visibility: hidden;
+	  display: block;
+	  font-size: 0;
+	  content: " ";
+	  clear: both;
+	  height: 0;
+	}
+
+	/*CENTER TEXT*/
+	.center-text {
+		text-align: center;
+	}

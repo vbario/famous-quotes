@@ -1,0 +1,278 @@
+/*CSS for Alicia Theme
+By Vladimir Baranov
+HackerYou 2016 Summer Bootcamp - Week 3*/
+/*Import frameworks*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Theme Colors (SCSS)*/
+/*Theme Fonts (SCSS)*/
+*, *:before, *:after {
+  moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: -webkit-linear-gradient(left, #000000, #171717);
+  background: -o-linear-gradient(left, #000000, #171717);
+  background: linear-gradient(to right, #000000, #171717);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 16px;
+  font-family: "Open Sans", sans serif;
+  overflow-x: hidden;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#quote-div {
+  background: #a73737;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(left, #a73737, #7a2828);
+  background: -o-linear-gradient(left, #a73737, #7a2828);
+  background: linear-gradient(to right, #a73737, #7a2828);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 32vh;
+  z-index: -20;
+}
+
+#author-name-div {
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #232526, #414345);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #232526, #414345);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 1.2rem;
+  height: 18vh;
+  flex-direction: row;
+  align-items: center;
+}
+
+#author-name {
+  margin-top: 0.6rem;
+  transform: translateX(12%);
+  z-index: -10;
+}
+
+p {
+  color: white;
+}
+
+.bar-item {
+  height: 100%;
+  width: 33.3333%;
+}
+
+.bar-item p {
+  color: #8c8c8c;
+}
+
+.bar-item:hover {
+  background: #e0e2db;
+}
+
+.bar-item:hover p {
+  color: black;
+}
+
+.replay-item, .next-item {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+.replay-item:hover, .next-item:hover {
+  cursor: pointer;
+}
+
+#quote {
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 1.5rem;
+  line-height: 1.4em;
+}
+
+@media (max-width: 480px) {
+  #quote {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+  }
+}
+
+@media (max-height: 500px) {
+  #quote {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+  }
+}
+
+.share-quote {
+  padding: 0px 5px;
+}
+
+#volume-control {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: unset;
+  z-index: 20;
+}
+
+#loading {
+  display: flex;
+  justify-content: space-around;
+  max-width: 600px;
+  position: absolute;
+  height: 86vh;
+  width: 100%;
+  background: #111111;
+  display: none;
+  top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: relative;
+}
+
+#author-pic {
+  position: relative;
+  background: #e0e2db;
+  height: 68vh;
+  display: flex;
+  justify-content: space-around;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -5;
+  -webkit-transition: background-position 2s;
+  transition: background-position 2s;
+}
+
+@media (max-height: 500px) {
+  #author-pic {
+    background-position: 50% 50% !important;
+  }
+}
+
+#shareThis {
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 200;
+  opacity: 0.5;
+}
+
+#replay-next-div {
+  height: 16vh;
+  flex-direction: row;
+}
+
+i {
+  display: inline-block;
+  width: 50%;
+  font-size: 2.5rem !important;
+  color: #8c8c8c !important;
+}
+
+.social {
+  flex-direction: row;
+  padding: 0 10%;
+}
+
+#share {
+  margin-bottom: 8px;
+  margin-top: 12px;
+}
+
+/* TOOLS */
+/*CLEARFIX*/
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/*CENTER TEXT*/
+.center-text {
+  text-align: center;
+}
